@@ -82,13 +82,14 @@
         let age = prompt("What is your age?");
 
         let h1 = document.querySelector("h1");
-        h1.innerHTML = if (age >= 18) {
-            alert ("Hi" + name + "!Welcome to SheCodes !")
-        } else {
-            alert("Sorry,"+Name+ "! You cannot join SheCodes ")
-        } 
 
+        if (age >= 18) {
+          h1.innerHTML = "Hi " + name + " !Welcome to SheCodes !";
+        } else {
+          h1.innerHTML = 
+          "Sorry,"+Name+ "! You cannot join SheCodes";
         }
+      }
 
         let button = document.querySelector("button");
         button.addEventListener("click",apply);
