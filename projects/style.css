@@ -1,0 +1,37 @@
+* {
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif; 
+    background: blueviolet;
+    color: white;
+    text-align:center;
+}
+
+body {
+    margin:30px;
+    padding: 30px;
+    
+}
+
+h1 {
+    color:palegreen;
+    font-size: xx-large;
+}
+
+p {
+    font-size: large;
+}
+
+.btn{
+   display: block;
+   text-decoration: none ;
+   padding:30px;
+   color:black;
+   background: white;
+   margin:20px;
+   box-shadow:5px 10px #888888;
+}
+
+.social-icons{
+   margin-top: 30px;
+   margin-bottom: 30px;
+}
