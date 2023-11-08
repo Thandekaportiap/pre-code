@@ -9,6 +9,9 @@
         display: block;
         margin: 0 auto;
         height: 400px;
+        border: 10px solid transparent;
+        padding: 15px;
+        border-image: url(border.png) 30% round;
       }  
       p {
         margin: 0 auto;
@@ -18,15 +21,29 @@
         display: block;
         font-size: x-large;
         font-weight: 400;
-
       }
       body {
-        background-color: lightcyan;
         padding: 44px;
-
+        background-image: linear-gradient(red, yellow, green);
       }
       h1, h2 {
         text-align: center;
+      }
+      div {
+        width: 300px;
+        height: 40px;
+        padding: 80px;
+        margin: auto;
+        border: 6px solid black;
+
+      }
+      button {
+        border-radius: 22px;
+        padding: 18px 16px;
+        font-size: 20px;
+        display: block;
+        text-align: center;
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
       }
     </style>
 </head>
@@ -35,13 +52,33 @@
     <h1>Perfect <strong>Jam Tarts</strong></h1>
     <h2>Traditional home made treat</h2>
     </div>
+    <br/>
     <img src="https://veroscakes.co.za/cdn/shop/products/IMG-20191205-WA0033.jpg?v=1575640488" alt="jam tarts">
     <br>
-    <p>Jam tarts are a delicious retro treat that couldn't be simpler to bake.<br/> The beauty is that you can fill them with whatever jam or curd you have going spare - or even a mixture of lots of different types.</p>
+    <p>Jam tarts are a delicious retro treat that couldn't be <em>simpler to bake.</em><br/> The beauty is that you can fill them with whatever jam or curd you have going spare - or even a mixture of lots of different types.</p>
 
     <h2><span>Still hungry?</span>Why not have <a href="http://www.sothebys.com/en/about/services/sothebys-restaurant" target="_blank">another course</a></h2>
     <button>
-        view-more
+        more
     </button>
+    <hr>
+    <h2>Coded by Thandeka Mazibuko</h2>
+    <script>
+      function bakeoff() {
+        let treat =prompt("what is your fovorate treat?");
+        let bake = prompt("Do you like to bake?");
+
+        let h1 = document.querySelector("h1");
+
+        if (bake != yes){
+          h1.innerHTML = "Join our bake off game for "+ treat;
+        } else {
+          h1.innerHTML = "enjoy your "+ treat;
+        }
+      }
+
+      let morebutton = document.querySelector("button");
+      morebutton.addEventListener("click", bakeoff);
+    </script>
 </body>
 </html>
